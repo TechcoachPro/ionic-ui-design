@@ -54,7 +54,9 @@
         </ion-col>
       </ion-row>
       <ion-row>
-          <ion-col size="6">
+        <ion-col size-xl="6" offset-xl="3">
+          <ion-row>
+            <ion-col size="6">
               <ion-item lines="none">
                   <ion-label position="stacked" class="float-left" color="primary"><strong>Expiry Date</strong></ion-label>
                   <ion-input
@@ -68,22 +70,24 @@
                       [class.border-bottom]="!cardValidator.expDate"
                   ></ion-input>
               </ion-item>
-          </ion-col>
-          <ion-col size="6">
-              <ion-item lines="none">
-                  <ion-label position="stacked" class="float-left" color="primary"><strong>Security Code</strong></ion-label>
-                  <ion-input
-                      type="number"
-                      formControlName="cardCVV"
-                      autocapitalize=words
-                      class="uppercase"
-                      clearInput
-                      placeholder="CVV"
-                      (ionChange)="checkcvv($event)"
-                      [class.border-bottom]="!cardValidator.cVV"
-                  ></ion-input>
-              </ion-item>
-          </ion-col>
+            </ion-col>
+            <ion-col size="6">
+                <ion-item lines="none">
+                    <ion-label position="stacked" class="float-left" color="primary"><strong>Security Code</strong></ion-label>
+                    <ion-input
+                        type="number"
+                        formControlName="cardCVV"
+                        autocapitalize=words
+                        class="uppercase"
+                        clearInput
+                        placeholder="CVV"
+                        (ionChange)="checkcvv($event)"
+                        [class.border-bottom]="!cardValidator.cVV"
+                    ></ion-input>
+                </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-col>
       </ion-row>
       <ion-row>
         <ion-col size-xl="6" offset-xl="3">
